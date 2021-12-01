@@ -40,4 +40,16 @@ public class Neznayka implements Human{
         setMove2(move2);
         setMove3(move3);
     }
+    public boolean equals(Object obj) {
+        if (this.getClass() != obj.getClass())
+            return false;
+        Neznayka others = (Neznayka) obj;
+        return this.name == others.name;
+    }
+    public int hashCode() {
+        return this.name.hashCode();
+    }
+    public String toString() {
+        return this.name;
+    }
 }
